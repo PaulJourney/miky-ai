@@ -1,0 +1,161 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+model User {
+  id                  String   @id @default(uuid())
+  email               String   @unique
+  passwordHash        String   @map("password_hash")
+  firstName           String?  @map("first_name")
+  lastName            String?  @map("last_name")
+  credits             Int      @default(100)
+  plan                Plan     @default(FREE)
+  referralCode        String   @unique @map("referral_code")
+  referredBy          String?  @map("referred_by")
+  referralsCount      Int      @default(0) @map("referrals_count")
+  cashEarned          Float    @default(0) @map("cash_earned")
+  cashPaidOut         Float    @default(0) @map("cash_paid_out")
+  language            String   @default("en")
+  emailVerified       Boolean  @default(false) @map("email_verified")
+  emailVerificationToken String? @map("email_verification_token")
+  passwordResetToken  String?  @map("password_reset_token")
+  passwordResetExpires DateTime? @map("password_reset_expires")
+  stripeCustomerId    String?  @map("stripe_customer_id")
+  subscriptionId      String?  @map("subscription_id")
+  subscriptionStatus  String?  @map("subscription_status")
+  createdAt           DateTime @default(now()) @map("created_at")
+  updatedAt           DateTime @updatedAt @map("updated_at")
+
+  // Relations
+  conversations       Conversation[]
+  messages            Message[]
+  transactions        Transaction[]
+  referralsGiven      Referral[] @relation("ReferrerRelation")
+  referralsReceived   Referral[] @relation("ReferredRelation")
+  referrer            User?      @relation("UserReferralRelation", fields: [referredBy], references: [id])
+  referredUsers       User[]     @relation("UserReferralRelation")
+
+  @@map("users")
+}
+
+model Conversation {
+  id        String   @id @default(uuid())
+  userId    String   @map("user_id")
+  title     String
+  persona   Persona
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  // Relations
+  user     User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  messages Message[]
+
+  @@map("conversations")
+}
+
+model Message {
+  id               String   @id @default(uuid())
+  conversationId   String   @map("conversation_id")
+  userId           String   @map("user_id")
+  content          String
+  sender           Sender
+  persona          Persona?
+  creditsConsumed  Int      @default(0) @map("credits_consumed")
+  createdAt        DateTime @default(now()) @map("created_at")
+
+  // Relations
+  conversation Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  user         User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("messages")
+}
+
+model Transaction {
+  id                     String            @id @default(uuid())
+  userId                 String            @map("user_id")
+  type                   TransactionType
+  amount                 Float             @map("amount")
+  credits                Int               @default(0)
+  stripePaymentIntentId  String?           @map("stripe_payment_intent_id")
+  stripeSubscriptionId   String?           @map("stripe_subscription_id")
+  status                 TransactionStatus @default(PENDING)
+  metadata               String?
+  createdAt              DateTime          @default(now()) @map("created_at")
+
+  // Relations
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("transactions")
+}
+
+model Referral {
+  id             String   @id @default(uuid())
+  referrerId     String   @map("referrer_id")
+  referredId     String   @map("referred_id")
+  creditsAwarded Int      @default(300) @map("credits_awarded")
+  cashAwarded    Float    @default(2.00) @map("cash_awarded")
+  processed      Boolean  @default(false)
+  createdAt      DateTime @default(now()) @map("created_at")
+
+  // Relations
+  referrer User @relation("ReferrerRelation", fields: [referrerId], references: [id], onDelete: Cascade)
+  referred User @relation("ReferredRelation", fields: [referredId], references: [id], onDelete: Cascade)
+
+  @@unique([referrerId, referredId])
+  @@map("referrals")
+}
+
+model AdminSetting {
+  id        String   @id @default(uuid())
+  key       String   @unique
+  value     String
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("admin_settings")
+}
+
+enum Plan {
+  FREE
+  PLUS
+  BUSINESS
+}
+
+enum Persona {
+  ACADEMIC
+  MARKETER
+  ENGINEER
+  COACH
+  SENSEI
+  LAWYER
+  MEDICAL
+  GOD_MODE
+  RICHMAN
+  GENERAL
+}
+
+enum Sender {
+  USER
+  ASSISTANT
+}
+
+enum TransactionType {
+  SUBSCRIPTION
+  CREDITS
+  REFERRAL
+  CASHOUT
+}
+
+enum TransactionStatus {
+  PENDING
+  COMPLETED
+  FAILED
+  CANCELLED
+}
