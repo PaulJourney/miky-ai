@@ -1,0 +1,289 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Calendar Dark Theme Styles */
+.react-calendar {
+  width: 100%;
+  background: transparent;
+  border: none;
+  font-family: inherit;
+  color: #fff;
+}
+
+.react-calendar .react-calendar__navigation {
+  display: flex;
+  height: 44px;
+  margin-bottom: 1em;
+}
+
+.react-calendar .react-calendar__navigation button {
+  min-width: 44px;
+  background: #374151;
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  margin: 0 2px;
+  transition: background-color 0.2s;
+}
+
+.react-calendar .react-calendar__navigation button:hover {
+  background: #4B5563;
+}
+
+.react-calendar .react-calendar__navigation button:disabled {
+  background: #1F2937;
+  color: #6B7280;
+}
+
+.react-calendar .react-calendar__month-view__weekdays {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.75em;
+  color: #9CA3AF;
+}
+
+.react-calendar .react-calendar__month-view__weekdays__weekday {
+  padding: 0.5rem;
+}
+
+.react-calendar .react-calendar__tile {
+  max-width: 100%;
+  padding: 10px 6px;
+  background: none;
+  border: none;
+  color: #fff;
+  border-radius: 6px;
+  position: relative;
+  transition: background-color 0.2s;
+}
+
+.react-calendar .react-calendar__tile:hover {
+  background: #374151;
+}
+
+.react-calendar .react-calendar__tile--active {
+  background: #3B82F6 !important;
+  color: white;
+}
+
+.react-calendar .react-calendar__tile--now {
+  background: #1F2937;
+}
+
+.react-calendar .react-calendar__tile--hasActive {
+  background: #06B6D4;
+}
+
+.react-calendar .react-calendar__tile--hasActive:hover {
+  background: #0891B2;
+}
+
+.react-calendar .react-calendar__month-view__days__day--weekend {
+  color: #F87171;
+}
+
+.react-calendar .react-calendar__month-view__days__day--neighboringMonth {
+  color: #6B7280;
+}
+
+/* Custom scrollbar for dashboard */
+.dashboard-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.dashboard-scroll::-webkit-scrollbar-track {
+  background: #1F2937;
+}
+
+.dashboard-scroll::-webkit-scrollbar-thumb {
+  background: #374151;
+  border-radius: 3px;
+}
+
+.dashboard-scroll::-webkit-scrollbar-thumb:hover {
+  background: #4B5563;
+}
+
+:root {
+  --background: 220 20% 4%;
+  --foreground: 220 15% 95%;
+  --card: 220 20% 8%;
+  --card-foreground: 220 15% 95%;
+  --popover: 220 20% 8%;
+  --popover-foreground: 220 15% 95%;
+  --primary: 217 91% 60%;
+  --primary-foreground: 0 0% 98%;
+  --secondary: 220 14% 20%;
+  --secondary-foreground: 220 15% 95%;
+  --muted: 220 14% 20%;
+  --muted-foreground: 220 10% 60%;
+  --accent: 220 14% 20%;
+  --accent-foreground: 220 15% 95%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 220 13% 18%;
+  --input: 220 13% 18%;
+  --ring: 217 91% 60%;
+  --radius: 0.5rem;
+  --chart-1: 220 70% 50%;
+  --chart-2: 160 60% 45%;
+  --chart-3: 30 80% 55%;
+  --chart-4: 280 65% 60%;
+  --chart-5: 340 75% 55%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    font-family: var(--font-inter), system-ui, sans-serif;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-inter), system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-inter {
+    font-family: var(--font-inter), system-ui, sans-serif;
+  }
+
+  .animate-bounce-soft {
+    animation: bounce-soft 2s ease-in-out infinite;
+  }
+
+  .animate-water-drop {
+    animation: water-drop 0.8s ease-out;
+  }
+
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient 3s ease infinite;
+  }
+}
+
+@keyframes bounce-soft {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes water-drop {
+  0% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1) translateY(-10px);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(15 23 42);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(51 65 85);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(71 85 105);
+}
+
+/* Smooth transitions for all interactive elements */
+button, input, textarea, select {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Focus ring for accessibility */
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid rgb(59 130 246);
+  outline-offset: 2px;
+}
+
+/* Custom gradient text utilities */
+.gradient-text-blue {
+  background: linear-gradient(135deg, #3b82f6, #60a5fa, #93c5fd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Loading spinner */
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Toast/notification styles */
+.toast-success {
+  @apply bg-green-600 text-white;
+}
+
+.toast-error {
+  @apply bg-red-600 text-white;
+}
+
+.toast-info {
+  @apply bg-blue-600 text-white;
+}
+
+/* Mobile-first responsive utilities */
+@media (max-width: 640px) {
+  .mobile-padding {
+    @apply px-4 py-2;
+  }
+
+  .mobile-text {
+    @apply text-sm;
+  }
+}

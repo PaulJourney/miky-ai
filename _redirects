@@ -1,0 +1,5 @@
+# API routes
+/api/* /.netlify/functions/___netlify-handler 200
+
+# Handle all other routes as SPA
+/* /index.html 200

@@ -1,0 +1,102 @@
+{
+  "common": {
+    "credits": "Crediti",
+    "water_cleaned": "Acqua Pulita",
+    "liters": "Litri",
+    "loading": "Caricamento...",
+    "error": "Errore",
+    "success": "Successo",
+    "cancel": "Annulla",
+    "save": "Salva",
+    "delete": "Elimina",
+    "edit": "Modifica",
+    "close": "Chiudi",
+    "back": "Indietro",
+    "next": "Avanti",
+    "previous": "Precedente",
+    "search": "Cerca",
+    "new_chat": "Nuova Chat"
+  },
+  "auth": {
+    "sign_in": "Accedi",
+    "sign_up": "Registrati",
+    "sign_out": "Esci",
+    "email": "Email",
+    "password": "Password",
+    "full_name": "Nome Completo",
+    "forgot_password": "Password Dimenticata",
+    "reset_password": "Reimposta Password",
+    "create_account": "Crea Account",
+    "already_have_account": "Hai già un account?",
+    "dont_have_account": "Non hai un account?",
+    "verify_email": "Verifica il tuo indirizzo email",
+    "verification_sent": "Email di verifica inviata"
+  },
+  "landing": {
+    "title": "Miky.ai",
+    "subtitle": "Assistente mobile-first, amichevole e focalizzato sull'impatto. 1 messaggio = 1L di acqua oceanica pulita.",
+    "cta_signin": "Accedi",
+    "cta_signup": "Registrati",
+    "support": "Supporto: support@miky.ai",
+    "powered_by": "Miky.AI powered by OpenAI"
+  },
+  "personas": {
+    "generic": "Miky Generico",
+    "professor": "Professor Miky",
+    "coach": "Coach Miky",
+    "richman": "Richman Miky",
+    "god": "God Miky",
+    "lawyer": "Lawyer Miky",
+    "doctor": "Doctor Miky",
+    "engineer": "Engineer Miky",
+    "marketer": "Marketer Miky"
+  },
+  "chat": {
+    "type_message": "Scrivi il tuo messaggio...",
+    "send": "Invia",
+    "new_thread": "Nuovo Thread",
+    "thread_title": "Titolo Thread",
+    "no_messages": "Nessun messaggio ancora. Inizia una conversazione!",
+    "credits_used": "Crediti utilizzati: {count}",
+    "water_impact": "Acqua pulita: {liters}L"
+  },
+  "dashboard": {
+    "welcome": "Benvenuto su Miky.ai",
+    "credits_remaining": "{count} crediti rimanenti",
+    "water_impact_total": "Hai aiutato a pulire {liters}L di acqua oceanica!",
+    "upgrade_plan": "Aggiorna Piano",
+    "manage_subscription": "Gestisci Abbonamento"
+  },
+  "pricing": {
+    "free": "Gratuito",
+    "plus": "Plus",
+    "pro": "Pro",
+    "per_month": "/mese",
+    "current_plan": "Piano Attuale",
+    "choose_plan": "Scegli Piano",
+    "free_credits": "100 crediti",
+    "plus_credits": "1.000 crediti",
+    "pro_credits": "5.000 crediti"
+  },
+  "referral": {
+    "your_referral_code": "Il Tuo Codice Referral",
+    "total_earnings": "Guadagni Totali",
+    "pending_payout": "Pagamento in Sospeso",
+    "request_payout": "Richiedi Pagamento",
+    "min_payout": "Pagamento minimo: €10",
+    "referral_link": "Link Referral",
+    "copy_link": "Copia Link",
+    "link_copied": "Link copiato!"
+  },
+  "admin": {
+    "dashboard": "Dashboard Admin",
+    "users": "Utenti",
+    "settings": "Impostazioni",
+    "payouts": "Pagamenti",
+    "models": "Modelli AI",
+    "feature_flags": "Flag Funzionalità",
+    "max_file_size": "Dimensione Max File (MB)",
+    "paypal_email": "Email PayPal",
+    "mock_users": "Mostra Utenti Mock"
+  }
+}

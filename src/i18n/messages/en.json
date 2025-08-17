@@ -1,0 +1,102 @@
+{
+  "common": {
+    "credits": "Credits",
+    "water_cleaned": "Water Cleaned",
+    "liters": "Liters",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "search": "Search",
+    "new_chat": "New Chat"
+  },
+  "auth": {
+    "sign_in": "Sign In",
+    "sign_up": "Sign Up",
+    "sign_out": "Sign Out",
+    "email": "Email",
+    "password": "Password",
+    "full_name": "Full Name",
+    "forgot_password": "Forgot Password",
+    "reset_password": "Reset Password",
+    "create_account": "Create Account",
+    "already_have_account": "Already have an account?",
+    "dont_have_account": "Don't have an account?",
+    "verify_email": "Verify your email address",
+    "verification_sent": "Verification email sent"
+  },
+  "landing": {
+    "title": "Miky.ai",
+    "subtitle": "Mobile-first assistant, friendly and focused on impact. 1 message = 1L of ocean water cleaned.",
+    "cta_signin": "Sign in",
+    "cta_signup": "Sign up",
+    "support": "Support: support@miky.ai",
+    "powered_by": "Miky.AI powered by OpenAI"
+  },
+  "personas": {
+    "generic": "Generic Miky",
+    "professor": "Professor Miky",
+    "coach": "Coach Miky",
+    "richman": "Richman Miky",
+    "god": "God Miky",
+    "lawyer": "Lawyer Miky",
+    "doctor": "Doctor Miky",
+    "engineer": "Engineer Miky",
+    "marketer": "Marketer Miky"
+  },
+  "chat": {
+    "type_message": "Type your message...",
+    "send": "Send",
+    "new_thread": "New Thread",
+    "thread_title": "Thread Title",
+    "no_messages": "No messages yet. Start a conversation!",
+    "credits_used": "Credits used: {count}",
+    "water_impact": "Water cleaned: {liters}L"
+  },
+  "dashboard": {
+    "welcome": "Welcome to Miky.ai",
+    "credits_remaining": "{count} credits remaining",
+    "water_impact_total": "You've helped clean {liters}L of ocean water!",
+    "upgrade_plan": "Upgrade Plan",
+    "manage_subscription": "Manage Subscription"
+  },
+  "pricing": {
+    "free": "Free",
+    "plus": "Plus",
+    "pro": "Pro",
+    "per_month": "/month",
+    "current_plan": "Current Plan",
+    "choose_plan": "Choose Plan",
+    "free_credits": "100 credits",
+    "plus_credits": "1,000 credits",
+    "pro_credits": "5,000 credits"
+  },
+  "referral": {
+    "your_referral_code": "Your Referral Code",
+    "total_earnings": "Total Earnings",
+    "pending_payout": "Pending Payout",
+    "request_payout": "Request Payout",
+    "min_payout": "Minimum payout: $10",
+    "referral_link": "Referral Link",
+    "copy_link": "Copy Link",
+    "link_copied": "Link copied!"
+  },
+  "admin": {
+    "dashboard": "Admin Dashboard",
+    "users": "Users",
+    "settings": "Settings",
+    "payouts": "Payouts",
+    "models": "AI Models",
+    "feature_flags": "Feature Flags",
+    "max_file_size": "Max File Size (MB)",
+    "paypal_email": "PayPal Email",
+    "mock_users": "Show Mock Users"
+  }
+}
