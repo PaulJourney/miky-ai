@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "functions": [
+    {
+      "function": "___netlify-edge-handler-src-middleware",
+      "name": "Next.js Middleware Handler",
+      "pattern": "^(?:\\/(_next\\/data\\/[^/]{1,}))?(?:\\/(\\/?index|\\/?index\\.json))?[\\/#\\?]?$",
+      "generator": "@netlify/plugin-nextjs@5.12.0"
+    },
+    {
+      "function": "___netlify-edge-handler-src-middleware",
+      "name": "Next.js Middleware Handler",
+      "pattern": "^(?:\\/(_next\\/data\\/[^/]{1,}))?(?:\\/(it|es))(\\.json)?[\\/#\\?]?$",
+      "generator": "@netlify/plugin-nextjs@5.12.0"
+    },
+    {
+      "function": "___netlify-edge-handler-src-middleware",
+      "name": "Next.js Middleware Handler",
+      "pattern": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/how-it-works(\\.json)?[\\/#\\?]?$",
+      "generator": "@netlify/plugin-nextjs@5.12.0"
+    },
+    {
+      "function": "___netlify-edge-handler-src-middleware",
+      "name": "Next.js Middleware Handler",
+      "pattern": "^(?:\\/(_next\\/data\\/[^/]{1,}))?(?:\\/(it|es))\\/how-it-works(\\.json)?[\\/#\\?]?$",
+      "generator": "@netlify/plugin-nextjs@5.12.0"
+    },
+    {
+      "function": "___netlify-edge-handler-src-middleware",
+      "name": "Next.js Middleware Handler",
+      "pattern": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/pricing(\\.json)?[\\/#\\?]?$",
+      "generator": "@netlify/plugin-nextjs@5.12.0"
+    },
+    {
+      "function": "___netlify-edge-handler-src-middleware",
+      "name": "Next.js Middleware Handler",
+      "pattern": "^(?:\\/(_next\\/data\\/[^/]{1,}))?(?:\\/(it|es))\\/pricing(\\.json)?[\\/#\\?]?$",
+      "generator": "@netlify/plugin-nextjs@5.12.0"
+    },
+    {
+      "function": "___netlify-edge-handler-src-middleware",
+      "name": "Next.js Middleware Handler",
+      "pattern": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/refer(\\.json)?[\\/#\\?]?$",
+      "generator": "@netlify/plugin-nextjs@5.12.0"
+    },
+    {
+      "function": "___netlify-edge-handler-src-middleware",
+      "name": "Next.js Middleware Handler",
+      "pattern": "^(?:\\/(_next\\/data\\/[^/]{1,}))?(?:\\/(it|es))\\/refer(\\.json)?[\\/#\\?]?$",
+      "generator": "@netlify/plugin-nextjs@5.12.0"
+    },
+    {
+      "function": "___netlify-edge-handler-src-middleware",
+      "name": "Next.js Middleware Handler",
+      "pattern": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/legal(?:\\/((?:[^\\/#\\?]+?)(?:\\/(?:[^\\/#\\?]+?))*))?(\\.json)?[\\/#\\?]?$",
+      "generator": "@netlify/plugin-nextjs@5.12.0"
+    },
+    {
+      "function": "___netlify-edge-handler-src-middleware",
+      "name": "Next.js Middleware Handler",
+      "pattern": "^(?:\\/(_next\\/data\\/[^/]{1,}))?(?:\\/(it|es))\\/legal(?:\\/((?:[^\\/#\\?]+?)(?:\\/(?:[^\\/#\\?]+?))*))?(\\.json)?[\\/#\\?]?$",
+      "generator": "@netlify/plugin-nextjs@5.12.0"
+    },
+    {
+      "function": "___netlify-edge-handler-src-middleware",
+      "name": "Next.js Middleware Handler",
+      "pattern": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/dashboard(\\.json)?[\\/#\\?]?$",
+      "generator": "@netlify/plugin-nextjs@5.12.0"
+    },
+    {
+      "function": "___netlify-edge-handler-src-middleware",
+      "name": "Next.js Middleware Handler",
+      "pattern": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/chat(\\.json)?[\\/#\\?]?$",
+      "generator": "@netlify/plugin-nextjs@5.12.0"
+    },
+    {
+      "function": "___netlify-edge-handler-src-middleware",
+      "name": "Next.js Middleware Handler",
+      "pattern": "^(?:\\/(_next\\/data\\/[^/]{1,}))?\\/admin(\\.json)?[\\/#\\?]?$",
+      "generator": "@netlify/plugin-nextjs@5.12.0"
+    },
+    {
+      "function": "___netlify-edge-handler-src-middleware",
+      "name": "Next.js Middleware Handler",
+      "pattern": "^(?:\\/(_next\\/data\\/[^/]{1,}))?(?:\\/((?!api|_next|_vercel|.*\\..*).*))(\\.json)?[\\/#\\?]?$",
+      "generator": "@netlify/plugin-nextjs@5.12.0"
+    }
+  ]
+}

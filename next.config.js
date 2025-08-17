@@ -25,13 +25,15 @@ const nextConfig = {
         hostname: 'oaidalleapiprodscus.blob.core.windows.net',
       },
     ],
-    unoptimized: process.env.NETLIFY === 'true',
+    unoptimized: true, // Required for Netlify
   },
   serverExternalPackages: ['@supabase/supabase-js', 'openai', 'stripe', '@sendgrid/mail'],
-  // Optimize i18n
+  // Optimize for Netlify
   experimental: {
     optimizePackageImports: ['next-intl']
-  }
+  },
+  // Ensure proper output for Netlify
+  output: 'standalone'
 };
 
 module.exports = withNextIntl(nextConfig);
